@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to PDF - Momz AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="fog-container" id="fogContainer"></div>
+    
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-logo">Momz</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <header class="page-header">
+            <a href="tools.html" class="back-link">← Back to Tools</a>
+        </header>
+
+        <main class="pdf-tool-container">
+            <h1 class="page-title">Text to PDF Converter</h1>
+            
+            <div class="tool-content">
+                <div class="input-section">
+                    <label for="textInput" class="input-label">Enter your text below</label>
+                    <textarea 
+                        id="textInput" 
+                        class="text-input" 
+                        placeholder="Type or paste your text here...&#x0a;&#x0a;Formatting tips:&#x0a;# Large Heading&#x0a;## Medium Heading&#x0a;**Bold text**&#x0a;*Italic text*"
+                    ></textarea>
+                    <div id="errorMessage" class="error-message"></div>
+                </div>
+
+                <button id="generatePdfBtn" class="generate-button">
+                    <span>Download PDF</span>
+                    <span class="button-icon">↓</span>
+                </button>
+
+                <div class="format-guide">
+                    <h4>Supported Formatting:</h4>
+                    <ul>
+                        <li><code># Heading</code> - Large heading</li>
+                        <li><code>## Subheading</code> - Medium heading</li>
+                        <li><code>**bold**</code> - Bold text</li>
+                        <li><code>*italic*</code> - Italic text</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
